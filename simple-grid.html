@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleGrid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr; */
+            grid-template-columns: repeat(2, 1fr 2fr);
+            /* grid-row-gap: 10px;
+            grid-column-gap: 10px; */
+            grid-gap: 15px;
+            /* grid-auto-rows: 10px; //to avoid the overflow: */
+            grid-auto-rows: minmax(100px, auto);
+            /* justify-items: stretch;
+            align-items: stretch; */
+        }
+        .grid-container div{
+            padding: 5px;
+            background-color: gray;
+        }
+        .grid-container div:nth-child(even){
+            background-color: lightgray;
+        }
+        #div1{
+            background-color: limegreen;
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sit. 1</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sit. 2</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sit. 3</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sit. 4</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sit. 5</div>
+    </div>
+</body>
+</html>
